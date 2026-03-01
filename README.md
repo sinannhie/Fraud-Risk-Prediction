@@ -98,7 +98,7 @@ streamlit run app.py
 
 ---
 
-```
+```bash
 
 ## 📂 Project Structure
 
