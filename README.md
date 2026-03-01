@@ -87,7 +87,7 @@ The model demonstrates strong generalization with minimal overfitting.
 git clone https://github.com/sinannhie/Fraud-Risk-Prediction.git
 cd Fraud-Risk-Prediction
 
-## Instal reuirer dependencies
+## Instal required dependencies
 
 pip install -r requirements.txt
 
