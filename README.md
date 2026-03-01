@@ -98,7 +98,8 @@ streamlit run app.py
 
 ---
 
-```markdown
+```
+
 ## 📂 Project Structure
 
 Fraud-Risk-Prediction/
