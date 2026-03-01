@@ -87,6 +87,35 @@ The model demonstrates strong generalization with minimal overfitting.
 git clone https://github.com/sinannhie/Fraud-Risk-Prediction.git
 cd Fraud-Risk-Prediction
 
+## Instal reuirer dependencies
+
+pip install -r requirements.txt
+
+
+### Run Application
+
+streamlit run app.py
+
+---
+
+```markdown
+## 📂 Project Structure
+
+Fraud-Risk-Prediction/
+│
+├── app.py
+├── fraud_model.pkl
+├── scaler.pkl
+├── feature_columns.pkl
+├── requirements.txt
+├── README.md
+└── Fraud_Score_Prediction_model.ipynb
+
+
+
+
+
+
 
 
 
