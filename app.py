@@ -175,13 +175,13 @@ if page == "🔮 Fraud Prediction":
     # Predict
         prediction = model.predict(input_scaled)[0]
         st.metric("Fraud Risk Score", f"{prediction*100:.2f}%")
-        if prediction >= 0.50:
+        if prediction >= 0.40:
             st.error("⚠  HIGH RISK ")
             st.write("Confidence         : Strong suspicious behaviour detected")
             st.write("Recommended Action : Block transaction or require OTP / manual review")
             st.write("Possible Reasons   : New device, foreign location, high transaction amount")
         
-        elif prediction >= 0.30:
+        elif prediction >= 0.25:
             st.warning("⚡ MEDIUM RISK")
             st.write("Risk Level           : MEDIUM")
             st.write("Confidence           : Some unusual patterns detected")
