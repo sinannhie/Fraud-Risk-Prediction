@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ### load Saved model
-model=joblib.load("fraud_model.pkl")
-scaler=joblib.load("scaler.pkl")
-feature_columns=joblib.load("feature_columns.pkl")
+model=joblib.load("models/fraud_model.pkl")
+scaler=joblib.load("models/scaler.pkl")
+feature_columns=joblib.load("models/feature_columns.pkl")
 
 #### page seperation
 page = st.sidebar.radio(
@@ -32,7 +32,7 @@ if page == "🔮 Fraud Prediction":
 
     col1,col2=st.columns(2)
     with col1:
-        amount = st.number_input("Transaction Amount", min_value=0.0)
+        amount = st.number_input("Transaction Amount", min_value=0,step=1000)
     
     transaction_hour = st.slider("Transaction Hour (0-23)", 0, 23, 12)
 
@@ -67,8 +67,8 @@ if page == "🔮 Fraud Prediction":
          }
 
     with col4:
-        distance_from_home_km=st.number_input("Distance From Home" ,min_value=0.0)
-        time_since_last_txn_hrs=st.number_input("Time Since last Txn (hrs)",min_value=0)
+        distance_from_home_km=st.number_input("Distance From Home" ,min_value=0,step=1)
+        time_since_last_txn_hrs=st.number_input("Time Since last Txn (hrs)",min_value=0,step=1)
 
     login_attempts_today=st.number_input("Number of login Attempt Today",min_value=0)
     
@@ -222,7 +222,7 @@ if page == "🤖 Model Details":
     st.write("The system was built using a Random Forest Regressor after performing comprehensive data cleaning, preprocessing, feature scaling, exploratory        data analysis (EDA), and hyperparameter tuning. Feature importance analysis was conducted to understand the key drivers influencing fraud risk.")
     st.write("The model processes transaction-related inputs and produces a risk score that can assist financial institutions and businesses in identifying         potentially suspicious activities and supporting informed decision-making.")
 
-    df=pd.read_csv("C://Users//Muhammed Sinan m//Documents//cs//python//Machine Learning//Supervised ml//fraud_detection_dataset.csv")
+    df=pd.read_csv("data/fraud_detection_dataset.csv")
     st.markdown("---")
     st.subheader("Dataset Information")
 
@@ -321,7 +321,7 @@ if page == "📊 Insights":
     st.header("Data Analysis Dashboard")
  ##Plot1
    
-    df=pd.read_csv("C://Users//Muhammed Sinan m//Documents//cs//python//Machine Learning//Supervised ml//fraud_detection_dataset.csv")
+    df=pd.read_csv("data/fraud_detection_dataset.csv")
     
 ## plot 2 
     st.markdown("---")
