@@ -103,14 +103,69 @@ streamlit run app.py
 ## 📂 Project Structure
 
 Fraud-Risk-Prediction/
+## Project Structure
+
+```text
+Fraud-Risk-Prediction/
+│
+├── data/
+│   └── fraud_detection_dataset.csv
+│
+├── models/
+│   ├── feature_columns.pkl
+│   ├── fraud_model.pkl
+│   └── scaler.pkl
+│
+├── notebooks/
+│   └── Fraud_Score_Prediction_model.ipynb
 │
 ├── app.py
-├── fraud_model.pkl
-├── scaler.pkl
-├── feature_columns.pkl
-├── requirements.txt
 ├── README.md
-└── Fraud_Score_Prediction_model.ipynb
+├── requirements.txt
+└── .gitignore
+```
+
+### Folder Description
+
+#### data/
+
+Contains the dataset used for training and analysis.
+
+* fraud_detection_dataset.csv
+
+#### models/
+
+Contains saved machine learning artifacts.
+
+* feature_columns.pkl → Stores the feature names used during model training.
+* fraud_model.pkl → Trained Random Forest Regressor model.
+* scaler.pkl → Saved feature scaling object used for preprocessing.
+
+#### notebooks/
+
+Contains Jupyter notebooks used for data exploration, preprocessing, model training, and evaluation.
+
+* Fraud_Score_Prediction_model.ipynb
+
+#### app.py
+
+Streamlit web application for fraud risk score prediction and data analysis dashboard.
+
+#### README.md
+
+Project documentation and usage instructions.
+
+#### requirements.txt
+
+List of required Python packages.
+
+#### .gitignore
+
+Specifies files and folders to exclude from Git version control.
+
+```
+```
+
 
 
 
